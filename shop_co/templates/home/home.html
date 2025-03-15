@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop-co Homepage</title>
+    <link rel="stylesheet" href="../../static/style/home/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% extends 'base/base.html' %}
+    {% block content %}
+
+    <!-- Hero Section -->
+    <header class="hero-section d-flex align-items-center justify-content-center" >
+        <div class="text-center text-white" style="position: absolute;">
+            <h1 class="fw-bold">STYLIST PICKS BEAT <br> THE HEAT</h1>
+            <a href="#" class="btn btn-outline-light mt-3">SHOP NOW</a>
+        </div>
+    </header>
+
+    <!-- New Arrivals Section -->
+    <section class="container text-center my-5">
+        <h2>Discover NEW Arrivals</h2>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card border-0">
+                    <img src="/static/images/product1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Trendy Shirt</h5>
+                        <p class="text-warning">★★★★★</p>
+                        <p class="text-muted">$29.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0">
+                    <img src="/static/images/product2.jpg" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Casual Tee</h5>
+                        <p class="text-warning">★★★★☆</p>
+                        <p class="text-muted">$19.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-dark mt-3">VIEW COLLECTION</a>
+    </section>
+
+    <!-- Summer Sale Banner -->
+    <section class="sale-banner text-white text-center py-5">
+        <h2>Don't Delay, Buy Today</h2>
+        <h1>Summer Sale 50% Off</h1>
+    </section>
+    
+     <!-- Categories Section -->
+     <section class="container text-center my-5">
+        <h2>Explore Our Must Have <br> Summer Collections And Stay Trendy</h2>
+        <div class="category">
+            <img src="/static/images/category1.jpg" class="img-fluid rounded" alt="Category 1">
+        </div>
+    </section>
+
+    <!-- Top Sellers Section -->
+    <section class="container text-center my-5">
+        <h2>Top Sellers</h2>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card border-0">
+                    <img src="/static/images/topseller1.jpg" class="card-img-top" alt="Top Seller 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant Dress</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0">
+                    <img src="/static/images/topseller2.jpg" class="card-img-top" alt="Top Seller 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Chic Blouse</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
