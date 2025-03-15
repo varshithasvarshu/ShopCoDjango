@@ -1,0 +1,43 @@
+/* styles.css */
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+  }
+  
+  .sidebar {
+      width: 200px;
+      background-color: #f4f4f4;
+      padding: 10px;
+      height: 100vh;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  }
+  
+  .sidebar h2 {
+      text-align: center;
+  }
+  
+  .shirt-list img {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      /* transition: transform 0.3s ease; */
+      display: flex;
+  }
+  
+  .shirt-list img:hover {
+      transform: scale(1.1);
+  }
+
+  /* .boxes{
+      display:grid;
+      width: 50%;
+
+  } */
+
+  .container {
+      display: flex;
+      justify-content: space-between; 
+      gap: 20px; 
+  }

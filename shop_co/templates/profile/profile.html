@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | Shop-co</title>
+    <link rel="stylesheet" href="../../static/style/profile/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <i class="fas fa-bars"></i>
+          <h2>Shop-co</h2>
+        </div>
+        <div class="profile-section">
+          <img
+            src="../../static/images/profile1.jpg"
+            alt="Profile Picture"
+            class="profile-pic"
+          />
+          <div class="profile-info">
+            <p>Hello 👋</p>
+            <h3>Joni</h3>
+          </div>
+        </div>
+        <nav class="menu">
+          <a href="#" class="active"
+            ><i class="fas fa-user"></i> Personal information</a
+          >
+          <a href="#"><i class="fas fa-shopping-cart"></i> My Orders</a>
+          <a href="#"><i class="fas fa-heart"></i> My Wishlists</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i> Addresses</a>
+          <a href="#"><i class="fas fa-credit-card"></i> Payments</a>
+          <a href="#"><i class="fas fa-bell"></i> Notifications</a>
+          <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="profile-content">
+        <h1>My Profile</h1>
+        <button class="edit-profile">
+          <i class="fas fa-edit"></i> Edit Profile
+        </button>
+
+        <div class="profile-form">
+          <div class="profile-img">
+            <img src="profile.jpg" alt="Profile Picture" />
+            <i class="fas fa-camera"></i>
+          </div>
+
+          <div class="input-group">
+            <label>First Name</label>
+            <input type="text" value="John" />
+          </div>
+          <div class="input-group">
+            <label>Last Name</label>
+            <input type="text" value="Dev" />
+          </div>
+          <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" value="roberfox@example.com" disabled />
+          </div>
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" value="+91 9087564312" />
+          </div>
+          <div class="input-group">
+            <label>Address</label>
+            <input type="text" value="India" />
+          </div>
+
+          <button class="save-btn">SAVE</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

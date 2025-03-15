@@ -1,7 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import User, Profile
+# from .models import User, Profile
 from django.core.files.storage import default_storage
+from django.contrib.auth.models import User
+from django.contrib.auth import login,authenticate
+from django.contrib.auth.hashers import make_password
+from django.contrib.auth.decorators import login_required
+
+@login_required(login_url='login')
+def home(request):
+    return render(request,'home/home.html')
 
 def signup(request):
     if request.method == "POST":
@@ -10,9 +18,18 @@ def signup(request):
         email = request.POST['email']
         username = request.POST['username']
         password = request.POST['password']
-
-        # Create User
-        user = User.objects.create(username=username, email=email, password=password)
+        
+        if not User.objects.filter(username=username).exists():
+            user = User.objects.create(
+                first_name=first_name,
+                last_name=last_name,
+                email=email,
+                username=username,
+                password=make_password(password)
+            )
+            user.save()
+        return redirect('login')
+        
         
         # Save Profile
         profile = Profile.objects.create(
@@ -31,14 +48,14 @@ def login_view(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
+        
+        user = authenticate(request,username=username,password=password)
+        if user is not None:
+            login(request,user)
+            return redirect('home')
+        else:
+            messages.error(request,'Invalid username or password.')
+            return render(request,'users/login.html')
 
-        try:
-            user = User.objects.get(username=username, password=password)
-            if user:
-                request.session['user_id'] = user.id  
-                messages.success(request, "Login successful!")
-                return redirect('home')
-        except User.DoesNotExist:
-            messages.error(request, "Invalid username or password")
 
     return render(request, 'users/login.html')

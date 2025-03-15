@@ -1,0 +1,166 @@
+/* Reset styles */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+      background-color: #fff;
+  }
+  
+  /* Container layout */
+  .container {
+      display: flex;
+      width: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+      width: 280px;
+      background: #fff;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      height: 100vh;
+  }
+  
+  .sidebar-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+  
+  .sidebar-header i {
+      font-size: 24px;
+  }
+  
+  .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+  }
+  
+  .profile-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+  
+  .profile-info h3 {
+      font-size: 18px;
+      font-weight: bold;
+  }
+  
+  .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0;
+  }
+  
+  .menu a:hover,
+  .menu a.active {
+      color: black;
+      font-weight: bold;
+  }
+  
+  /* Main Profile Content */
+  .profile-content {
+      flex-grow: 1;
+      padding: 40px;
+      background: #fff;
+  }
+  
+  h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+  }
+  
+  .edit-profile {
+      background: black;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+  }
+  
+  .profile-form {
+      margin-top: 20px;
+      max-width: 500px;
+  }
+  
+  .profile-img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+  
+  .profile-img img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+  
+  .profile-img i {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: black;
+      color: white;
+      padding: 5px;
+      border-radius: 50%;
+  }
+  
+  .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+  }
+  
+  .input-group label {
+      font-size: 14px;
+      margin-bottom: 5px;
+  }
+  
+  .input-group input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      background: #f9f9f9;
+  }
+  
+  .input-group input:disabled {
+      background: #eee;
+  }
+  
+  .save-btn {
+      background: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100px;
+  }
+  

@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'users',
     'cart',
     'review',
-    'shop_co'
+    'shop_co',
+    'Profile'
 ]
 
 MIDDLEWARE = [
@@ -83,8 +84,12 @@ WSGI_APPLICATION = 'shop_co.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':"shopco",
+        "USER":"root",
+        "PASSWORD":"varshu",
+        "HOST":"localhost",
+        "PORT":"3306"
     }
 }
 
